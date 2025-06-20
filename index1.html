@@ -48,12 +48,11 @@
 
     .item img {
   width: 100%;
-  height: auto;          /* ให้ความสูงปรับตามสัดส่วน */
-  object-fit: contain;   /* ปรับให้เห็นภาพครบไม่โดนตัด */
+  max-height: 60vh;      /* สูงไม่เกิน 60% ของหน้าจอมือถือ */
+  height: auto;
+  object-fit: contain;
   border-radius: 10px;
 }
-
-
     .description {
       margin-top: 10px;
       color: #ff4081;
