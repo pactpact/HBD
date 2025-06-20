@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,17 +14,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-x: hidden;
       position: relative;
+      text-align: center;
     }
 
     h1 {
       color: #ff4081;
-      font-size: 3em;
+      font-size: 2.5em;
       margin-bottom: 30px;
-      text-align: center;
       animation: fadeIn 2s ease-in-out;
+      padding: 0 10px;
     }
 
     .video {
@@ -45,17 +46,21 @@
       font-size: 1.2em;
       color: #ff3399;
       margin-bottom: 40px;
-      text-align: center;
       animation: fadeInUp 2s ease forwards;
+      padding: 0 15px;
+      line-height: 1.6;
     }
 
     .button-container2 {
       text-align: center;
+      width: 100%;
+      max-width: 300px;
     }
 
     .button {
-      padding: 12px 30px;
-      font-size: 18px;
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
       background-color: #ff66a3;
       color: white;
       border: none;
@@ -135,6 +140,25 @@
       }
     }
 
+    /* 📱 Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .message {
+        font-size: 1em;
+      }
+
+      .video iframe {
+        height: 200px;
+      }
+
+      .button {
+        font-size: 0.95em;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -155,9 +179,9 @@
   </div>
 
   <div class="button-container2">
-       <a href="index3.html">
-           <button class="button">กดหน้าถัดไป</button>
-       </a>
+    <a href="index3.html">
+      <button class="button">กดหน้าถัดไป</button>
+    </a>
   </div>
 
   <!-- 💗 Hearts floating -->
@@ -168,13 +192,12 @@
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = (4 + Math.random() * 3) + 's';
       document.body.appendChild(heart);
-
       setTimeout(() => {
         heart.remove();
       }, 7000);
     }
 
-    setInterval(createHeart, 500); // ทุก 0.5 วิ จะมีหัวใจลอยขึ้น
+    setInterval(createHeart, 500);
   </script>
 </body>
 </html>
